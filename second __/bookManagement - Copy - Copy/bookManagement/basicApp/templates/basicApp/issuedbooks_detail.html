@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>@{{user}}</h1>
+{% for item in books %}
+
+<h2>{{item.book}}</h2>
+
+{% endfor %}
+
+
+{% endblock %}

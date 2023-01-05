@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for book in books_list %}
+
+    <div>
+        <h1><a href="{% url 'basicApp:books_detail' pk=book.pk %}">{{book.title}}</a></h1>
+        <div class="date">
+            <p>Published On : {{book.published_date|date:"D M Y"}}</p>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for repo in repositories %}
+
+    <div>
+        <h1><a href="{% url 'basicApp:RepoDetailView' pk=repo.pk %}">{{repo.title}}</a></h1>
+        <div class="date">
+            <p>Created On : {{repo.createdDate}}</p>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% endblock %}
